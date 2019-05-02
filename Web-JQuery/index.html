@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #liste {
+            width: 200px;
+            height: 150px;
+            background-color: lightgray;
+        }
+        .genel{
+            width:200px;
+            height:150px;
+            background-color:aquamarine;
+        }
+    </style>
+    <script src="JQuery-3.3.1.js"></script>
+    <script> // ya body nin içine yaz yada sayfa açıldığında yüklensin seçeneği
+        $(document).ready(function () {
+            $("#btnEkle").click(function () {
+                var metin = $("#txtAd").val() + "<br/>"; //string concatenations
+                //$("#liste").html(metin);
+                $("#liste").append(metin)  //üstüne yazmaması için
+                $("#txtAd").val("");
+                $("#txtAd").focus();
+            });
+            $("#btnAcKapa").click(function () {
+                // $(".genel").toggle("slow");
+                //$(".genel").fadeToggle("slow");
+                $(".genel").slideToggle("slow");
+            });
+           // var checked = 0;
+
+
+            $("#btnRenkDegistir").click(function () {
+                var aktifRenk = $(this).css("background-color");
+                //alert("if öncesi");
+                //alert(aktifRenk);
+                if (aktifRenk == "rgb(255, 0, 0)") { //boşluk bırakılmalı
+                    //alert("if içi");
+                    //alert(aktifRenk);
+                    $(this).css("background-color", "gray"); //virgülden sonra renk yazmazsak butonun rengini direk alır.
+                    //aktifRenk = $(this).css("background-color");
+
+                }
+                else {
+                    //alert("else içi başı");
+                    //alert(aktifRenk);
+                    $(this).css("background-color", "red");
+                    //aktifRenk = $(this).css("background-color");
+                    //alert("else içi sonu");
+                    //alert(aktifRenk);
+                }
+
+                //---------Nükhet hocanın beğenmediği çözüm;
+                //if (checked) {
+                //    $(this).css("background-color", "gray");
+                //    checked = false;
+                //}
+                //else {
+                //    $(this).css("background-color", "red");
+                //    checked = true;
+                //}
+                //---------------
+            });
+                $("#btnRassalRenkDegistir").click(function () {
+                    var colorR = Math.floor((Math.random() * 256));
+                    var colorG = Math.floor((Math.random() * 256));
+                    var colorB = Math.floor((Math.random() * 256));
+                    $(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+            });
+        });
+    </script>
+</head>
+<body>
+    Adı: <input type="text" id="txtAd" />
+    <input type="button" value="Ekle" id="btnEkle" />
+    <br />
+    <br />
+    <div id="liste"></div>
+    <input type="button" value="Renk Değiştir" id="btnRenkDegistir" />
+    <input type="button" value="Rassal Renk Değiştir" id="btnRassalRenkDegistir" />
+    <br />
+    <br />
+    <div class="genel"></div>
+    <input type="button" value="DIV Ac/Kapa" id="btnAcKapa" />
+
+</body>
+</html>

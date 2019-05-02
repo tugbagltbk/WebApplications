@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #menu {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+            margin-left: -10px;
+            margin-top: 100px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            float: left;
+        }
+
+        #AcKapa {
+            margin-top: 120px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="JQuery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#AcKapa").click(function () {
+                $("#menu").toggle("slow", function () {
+                    var goruntuOzelligi = $("#menu").css("display");
+                    if (goruntuOzelligi == "none") //kapalı anlamına gelir
+                        $("#AcKapa").attr("src", "/Images/right.PNG");
+                    else
+                        $("#AcKapa").attr("src", "/Images/left.PNG");
+                });
+            });
+        });
+      
+    </script>
+</head>
+<body>
+    <div id="menu"></div>
+    <img src="/Images/left.PNG" id="AcKapa"/>
+</body>
+</html>

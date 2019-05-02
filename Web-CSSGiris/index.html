@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*header içinde tanımlanan css hepsini etkiler internal css*/
+        p {
+            font-size: 20px;
+            font-family: 'Comic Sans MS';
+            color: red;
+            background-color: darkgray;
+            text-align: center;
+        }
+
+        div {
+            width:200px;
+            height:200px;
+            background-color:blue;
+            border:5px solid black;
+        }
+        #ozelDIV{
+            background-color:crimson
+        }
+        .ortakDIV { /*class a erişim*/
+                background-color:green;
+                border:10px solid black;
+                border-radius:15px;   /*köşeleri yuvarlatma*/
+                /*border-bottom-left-radius:15px;*/
+                box-shadow:gray 10px 10px 10px;
+                    }
+    </style>
+</head>
+<body>
+    <!--CSS (Cascading Style Sheet) :  HTML elemanlarına (tag'lerine) stil vermek için kullanılan yapıdır.
+        CSS 3'e ayrılır (css kodlarının yazıldığı yere göre 3'e ayrılır)
+        1- Inline CSS: css kodlarının html elemanarını style attribute'unda yazıldığı css tipidir.
+        2- Internal CSS: css kodlarının html sayfasındaki head düğümü arasında, style düğümü açılarak, style düğümünün içerisine yazıldığı css tipidir.
+        3- External CSS: css kodlarının projede ayrı br css dosyasında yazıldığı css tipidir ve bu dosyada sadece css kodları yazılır.
+        ***Bootstrap bir css kütüphanesidir.
+        ***JQuery ise bir Javascript kütüphanesidir.
+        -->
+    <p>ilk css verdiğimiz p elemanı</p>
+    <p style="font-size:20px">ilk css verdiğimiz p elemanı</p>
+    <p style="font-size:20px;font-family:'Comic Sans MS'">ilk css verdiğimiz p elemanı</p>
+    <p style="font-size:20px;font-family:'Comic Sans MS';color:red">ilk css verdiğimiz p elemanı</p>
+    <p style="font-size:20px;font-family:'Comic Sans MS';color:red;background-color:darkgray">ilk css verdiğimiz p elemanı</p>
+    <p style="font-size:20px;font-family:'Comic Sans MS';color:red;background-color:darkgray;text-align:center">ilk css verdiğimiz p elemanı</p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo, libero vel venenatis porttitor, eros erat mattis eros, a semper urna diam sit amet justo. Nullam venenatis, turpis ut vestibulum iaculis, tortor magna imperdiet enim, et pharetra dui diam nec quam. Phasellus in nulla dictum arcu bibendum ullamcorper in ut enim. Aliquam quis leo nunc. Praesent quis velit vestibulum, aliquet nisl vel, pellentesque neque. Quisque tristique imperdiet tristique. Phasellus sed est malesuada, aliquet erat vulputate, eleifend velit. In blandit ipsum ac egestas aliquet. Donec cursus lacinia augue, quis laoreet dolor dictum ac. Aliquam rutrum mauris et velit volutpat, vitae commodo lorem euismod. Etiam vitae est vitae nibh tristique iaculis in vehicula massa.
+    </p>
+    <br />
+    <br />
+    <p style="color:rebeccapurple;text-align:left">
+
+        Vivamus eget dolor at diam sodales iaculis a vitae est. Nam gravida turpis risus. Praesent vestibulum maximus mattis. Aenean in velit sed ex egestas congue. Curabitur in nisi sed lectus tempor rhoncus at pulvinar odio. Etiam lobortis convallis urna, et congue felis pretium et. Nulla sapien elit, laoreet ac ornare sed, consequat a arcu. Ut pellentesque libero sit amet ligula molestie vehicula. Phasellus scelerisque leo turpis, non facilisis erat sodales a. Nunc semper, arcu vel fringilla tempor, orci nisl vulputate lacus, egestas lacinia ex neque et lectus. Aenean egestas ipsum vel erat vestibulum, interdum finibus felis mattis. Sed porta libero non tortor hendrerit tristique. Proin orci justo, dignissim vehicula eleifend nec, suscipit vitae mi.
+    </p>
+    <br />
+    <br />
+    <p>
+        Nam mattis imperdiet metus, egestas faucibus tellus suscipit sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna nibh, egestas vitae vulputate tincidunt, porttitor nec justo. Duis volutpat ligula quis velit consectetur convallis eu nec purus. Aliquam tellus dui, suscipit non neque vel, molestie congue neque. Etiam vulputate enim nisl, eu ultrices felis ornare et. Praesent nisl est, volutpat at varius in, efficitur molestie mauris.
+    </p>
+    <br />
+    <br />
+    <div></div>
+    <br />
+    <br />
+    <div id="ozelDIV"></div>
+    <br />
+    <br />
+    <div></div>
+    <br />
+    <br />
+    <div class="ortakDIV"></div>
+    <br />
+    <br />
+    <div class="ortakDIV"></div>
+    <br />
+    <br />
+    <div class="ortakDIV"></div>
+
+</body>
+</html>

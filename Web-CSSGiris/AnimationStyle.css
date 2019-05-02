@@ -1,0 +1,54 @@
+﻿
+div {
+    width:200px;
+    height:150px;
+    background-color:steelblue;
+    border:4px solid black;
+    border-radius:15px;
+    float:left;
+    /*cursor:pointer;*/
+}
+
+div:hover{  /*üstüne gelindiğinde*/
+    cursor:pointer;
+    background-color:red;
+    transition:1s;  /*yavaşça geçiş için*/
+    transform:rotateX(180deg); /*360 derece kendi etrafında dönsün*/
+}
+#sabit{
+    position:fixed;
+    margin-top:300px;
+    background-color:yellow;
+}
+
+.animasyon:hover{
+    animation:AnimasyonYap 10s;
+    /*position:absolute;*/
+}
+@keyframes AnimasyonYap{
+    0%{
+        /*margin-top:0px;
+        margin-left:208px;*/
+        transform:translate(0px,0px);
+    }
+    25%{
+        /*margin-top:0px;
+        margin-left:624px;*/
+
+        transform:translateX(208px);
+    }
+    50%{
+        /*margin-top:500px;
+        margin-left:624px;*/
+        transform:translate(208px,500px);
+    }
+    75%{
+        /*margin-top:500px;
+        margin-left:208px;*/
+        transform:translate(0px,500px);
+    }
+    100%{
+        /*margin-top:0px;
+        margin-left:208px;*/
+    }
+}

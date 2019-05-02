@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function UyariVer() {
+            //alert("Fonksiyona girdi");
+            alert("Uyarı!!!!");
+        }
+        window.onload = function () { //sayfanın yükleme işlemi bitikten sonra bu fonk çalıştır.
+            document.getElementById("btnEkle").onclick = function myfunction() {
+                //alert("Fonksiyona girdi");
+                var isimAlani = document.getElementById("txtAdi");
+                var metin = isimAlani.value + "<br/>";
+                document.getElementById("liste").innerHTML += metin;
+                isimAlani.value = "";
+                isimAlani.focus();
+            }
+        }
+           //function IsimEkle() {
+           //     var metin = document.getElementById("txtAdi").value;
+           //     document.getElementById("liste").innerHTML = metin;
+           // }
+    </script>
+    <style>
+        #liste {
+            width: 150px;
+            height: 400px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    Adı: <input type="text" id="txtAdi" />
+    <!--<input type="button" value="Uyarı Ver" onclick="UyariVer()" />-->
+    <!--<input type="button" value="Ekle" id="btnEkle" onclick="IsimEkle()" />-->
+    <input type="button" value="Ekle" id="btnEkle" />
+    <br />
+    <br />
+    <div id="liste"></div>
+</body>
+</html>
